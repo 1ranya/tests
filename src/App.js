@@ -1,22 +1,51 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {useRef, useEffect, useState} from 'react'
+import Reception from './Reception';
+import {ThemeContext} from './Contexts/Contexts'
 
 function App() {
+
+  const btnRef = useRef(0)
+  const paragraphRef = useRef()
+  const [ btnState, setBtnState ] = useState(0)
+  const [ themeValue, setThemeValue ] = useState('white')
+  
+  useEffect(() => {
+    btnRef.current = btnRef.current + 1
+    console.log("btnRef ", btnRef.current)
+    console.log("paragraph ref", paragraphRef)
+  })
+
+  const countRender = () => {
+    setBtnState(btnState+1)
+    // (btnRef.current >10 && btnState < 20) ? setThemeValue('red') : setThemeValue('white');
+    
+    if(btnRef.current >10 && btnState < 20) {
+      setThemeValue('red')
+      paragraphRef.current.hidden = true
+    } else {
+      setThemeValue('white');
+      paragraphRef.current.hidden = false
+    }
+
+    console.log("rendred", btnState)
+    console.log("theme value ", themeValue)
+  }
+
+
   return (
-    <div className="App">
+    <div className="App" style={{border: "2px solid #fefae0", margin:"4px"}}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <p ref={paragraphRef} value="test">
+          Ref <code> render time {btnRef.current} </code>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+  
+        <button onClick={countRender}> Click me </button>
+        <ThemeContext.Provider value={themeValue}>
+          <Reception/>
+        </ThemeContext.Provider>
       </header>
     </div>
   );
