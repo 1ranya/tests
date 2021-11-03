@@ -3,3 +3,5 @@ GET http://localhost:3000/posts
 
 
 POST http://localhost:3000/:id 
+
+DELETE http://localhost:3000/:id 
