@@ -7,4 +7,3 @@ app.get('/posts', (req, res) => {
 
 app.post('/')
 app.listen(4000);
-// app.use(app.json())

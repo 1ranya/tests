@@ -13,8 +13,6 @@ function App() {
   
   useEffect(() => {
     btnRef.current = btnRef.current + 1
-    console.log("btnRef ", btnRef.current)
-    console.log("paragraph ref", paragraphRef)
   })
 
   const countRender = () => {
@@ -28,9 +26,6 @@ function App() {
       setThemeValue('white');
       paragraphRef.current.hidden = false
     }
-
-    console.log("rendred", btnState)
-    console.log("theme value ", themeValue)
   }
 
 
