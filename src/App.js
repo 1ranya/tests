@@ -11,6 +11,7 @@ function App() {
   const [ btnState, setBtnState ] = useState(0)
   const [ themeValue, setThemeValue ] = useState('white')
   console.log("hello")
+  console.log("world")
   useEffect(() => {
     btnRef.current = btnRef.current + 1
   })
