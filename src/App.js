@@ -10,8 +10,8 @@ function App() {
   const paragraphRef = useRef()
   const [ btnState, setBtnState ] = useState(0)
   const [ themeValue, setThemeValue ] = useState('white')
-  console.log("hello")
-  console.log("world")
+
+  console.log('test git comit --amend')
   useEffect(() => {
     btnRef.current = btnRef.current + 1
   })
