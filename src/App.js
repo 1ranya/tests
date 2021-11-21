@@ -12,6 +12,7 @@ function App() {
   const [ themeValue, setThemeValue ] = useState('white')
 
   console.log('test git comit --amend')
+  console.log('hello')
   useEffect(() => {
     btnRef.current = btnRef.current + 1
   })
