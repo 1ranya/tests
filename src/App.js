@@ -5,18 +5,12 @@ import Reception from './Reception';
 import {ThemeContext} from './Contexts/Contexts'
 
 function App() {
-  
-  console.log(' i am in devlop branch! ')
-
-  console.log(' i am in devlop branch again! ')
 
   const btnRef = useRef(0)
   const paragraphRef = useRef()
   const [ btnState, setBtnState ] = useState(0)
   const [ themeValue, setThemeValue ] = useState('white')
 
-  console.log('test git comit --amend')
-  console.log('hello')
   useEffect(() => {
     btnRef.current = btnRef.current + 1
   })
