@@ -17,6 +17,7 @@ function App() {
 
   console.log("first")
   console.log("seconde")
+  console.log("third")
   const countRender = () => {
     setBtnState(btnState+1)
     // (btnRef.current >10 && btnState < 20) ? setThemeValue('red') : setThemeValue('white');
